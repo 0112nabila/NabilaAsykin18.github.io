@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Personal Website</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ccc; /* Set the background color to gray */
+    }
+  
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+  
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      overflow: hidden;
+    }
+  
+    nav ul li {
+      float: left;
+    }
+  
+    nav ul li a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+  
+    nav ul li a:hover {
+      background-color: #ddd;
+    }
+  
+    #container {
+      text-align: center;
+    }
+
+    .box {
+      width: 300px;
+      height: 200px;
+      background-color: grey;
+      margin: 20px;
+      padding: 10px;
+      display: none;
+    }
+    
+    .box.active {
+      display: block;
+    }
+    
+    .box img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+  <script>
+    function showInfo(boxId) {
+      var boxes = document.getElementsByClassName('box');
+      for (var i = 0; i < boxes.length; i++) {
+        boxes[i].classList.remove('active');
+      }
+      var box = document.getElementById(boxId);
+      box.classList.add('active');
+    }
+  </script>
+</head>
+<body>
+   <header>
+    <h1>Welcome to My Personal Website</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="mygallery.html">My Gallery</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>SK SERI IMPIAN</h1>
+    <div class="box" id="box1">
+      <img src="image/sksi.jpg" alt="SK SERI IMPIAN">
+      <h2>Box 1</h2>
+      <p>The school where I studied from kindergarten until I passed the UPSR.</p>
+      <p>Location: Jalan Guar Perahu 1, 14400 Kubang Semang, Pulau Pinang</p>
+    </div>
+
+    <div class="box" id="box2">
+      <img src="image/smkgpi.jpg" alt="SMK GUAR PERAHU INDAH">
+      <h2>Box 2</h2>
+      <p>Here I took my PT3 and SPM in the pure science course in 2019.</p>
+      <p>Location: Sekolah Menengah Kebangsaan Guar Perahu Indah, Kubang Semang, Bukit Mertajam, S.Perai, 14400, Bukit Mertajam, Pulau Pinang, Malaysia</p>
+    </div>
+
+    <div class="box" id="box3">
+      <img src="image/uitmk.jpg" alt="UiTM KEDAH">
+      <h2>Box 3</h2>
+      <p>I continued studying here as an information management specialist and I'm now in my last semester.</p>
+      <p>Location: 08400 Merbok, Kedah</p>
+    </div>
+
+    <div>
+      <img src="sensor.png" alt="Sensor" onclick="showInfo('box1')">
+      <img src="sensor.png" alt="Sensor" onclick="showInfo('box2')">
+      <img src="sensor.png" alt="Sensor" onclick="showInfo('box3')">
+    </div>
+  </main>
+
+  <footer>
+    <!-- Footer content here -->
+  </footer>
+</body>
+</html>
